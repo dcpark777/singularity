@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Quiet down Spark logs -->
+        <Logger name="org.apache.spark" level="WARN"/>
+        <Logger name="org.apache.hadoop" level="WARN"/>
+        <Logger name="org.apache.hive" level="WARN"/>
+        <Logger name="org.apache.parquet" level="WARN"/>
+        <Logger name="org.apache.avro" level="WARN"/>
+        <Logger name="org.apache.kafka" level="WARN"/>
+        <Logger name="org.apache.zookeeper" level="WARN"/>
+        <Logger name="org.apache.curator" level="WARN"/>
+        <Logger name="org.apache.http" level="WARN"/>
+        <Logger name="org.apache.commons" level="WARN"/>
+        <Logger name="com.fasterxml.jackson" level="WARN"/>
+        <Logger name="io.netty" level="WARN"/>
+        <Logger name="akka" level="WARN"/>
+        <Logger name="com.typesafe" level="WARN"/>
+        <Logger name="org.eclipse.jetty" level="WARN"/>
+        <Logger name="org.apache.catalina" level="WARN"/>
+        <Logger name="org.apache.tomcat" level="WARN"/>
+        <Logger name="org.apache.logging" level="WARN"/>
+        <Logger name="org.slf4j" level="WARN"/>
+        <Logger name="ch.qos.logback" level="WARN"/>
+        
+        <!-- Keep our application logs visible -->
+        <Logger name="com.singularity" level="INFO"/>
+        
+        <!-- Root logger -->
+        <Root level="WARN">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
